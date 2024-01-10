@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:udemy_app/container_text_example.dart';
 
 class WidgetsExamplesPage extends StatelessWidget {
   const WidgetsExamplesPage({super.key});
@@ -14,18 +15,13 @@ class WidgetsExamplesPage extends StatelessWidget {
         ),
         centerTitle: true,
         title: const AutoSizeText(
-          "Titel",
+          "Beschuss Tracking",
           style: TextStyle(fontWeight: FontWeight.w700),
           minFontSize: 25.0,
         ),
         backgroundColor: const Color.fromRGBO(171, 226, 255, 60),
       ),
-      body: const Center(
-        child: AutoSizeText(
-          "Hello World",
-          minFontSize: 20.0,
-        ),
-      ),
+      body: const ContainerTextExample(),
     );
   }
 }
