@@ -25,13 +25,13 @@ class WidgetsExamplesPage extends StatelessWidget {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(
-              horizontal: 10, vertical: 20), //For every Widget in Body
+              horizontal: 10, vertical: 20), //! For every Widget in Body
           child: Column(
             children: [
-              //First Widget
+              //* First Widget
               const ContainerTextExample(),
 
-              //Second Widget
+              //* Second Widget
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 child: Material(
@@ -58,7 +58,7 @@ class WidgetsExamplesPage extends StatelessWidget {
                 ),
               ),
 
-              //Third Widget
+              //* Third Widget
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 child: Material(
@@ -85,7 +85,7 @@ class WidgetsExamplesPage extends StatelessWidget {
                 ),
               ),
 
-              //Fourth Widget
+              //* Fourth and Fifth Widget
               const RowExpandedExample(),
             ],
           ),

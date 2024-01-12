@@ -10,7 +10,7 @@ class RowExpandedExample extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: Row(
         children: [
-          //First Widget
+          //* First Widget
           Material(
             elevation: 10,
             borderRadius: BorderRadius.circular(20),
@@ -35,7 +35,7 @@ class RowExpandedExample extends StatelessWidget {
             ),
           ),
 
-          //Second Widget
+          //* Second Widget
           Expanded(
             child: Padding(
               padding: const EdgeInsets.only(left: 20),
