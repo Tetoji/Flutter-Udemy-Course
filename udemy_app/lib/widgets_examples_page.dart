@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:udemy_app/row_expanded_example.dart';
 import 'package:udemy_app/container_text_example.dart';
 
 class WidgetsExamplesPage extends StatelessWidget {
@@ -9,7 +10,7 @@ class WidgetsExamplesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(146, 199, 207, 10),
+        backgroundColor: const Color.fromARGB(246, 116, 189, 202),
         leading: const Icon(
           Icons.home,
           size: 25.0,
@@ -23,21 +24,69 @@ class WidgetsExamplesPage extends StatelessWidget {
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          padding: const EdgeInsets.symmetric(
+              horizontal: 10, vertical: 20), //For every Widget in Body
           child: Column(
-            //mainAxisAlignment: MainAxisAlignment.center, //puts all children in the middle of the screen
             children: [
+              //First Widget
               const ContainerTextExample(),
-              Container(
-                margin: const EdgeInsets.symmetric(vertical: 10),
-                color: const Color.fromRGBO(251, 249, 241, 10),
-                height: 100,
+
+              //Second Widget
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Material(
+                  elevation: 10,
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(246, 205, 48, 30),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    height: 100,
+                    child: const Center(
+                      child: AutoSizeText(
+                        "2",
+                        minFontSize: 15.0,
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ),
-              Container(
-                margin: const EdgeInsets.symmetric(vertical: 10),
-                color: const Color.fromRGBO(229, 225, 218, 10),
-                height: 100,
-              )
+
+              //Third Widget
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Material(
+                  elevation: 10,
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color.fromRGBO(239, 174, 63, 0.817),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    height: 100,
+                    child: const Center(
+                      child: AutoSizeText(
+                        "3",
+                        minFontSize: 15.0,
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+
+              //Fourth Widget
+              const RowExpandedExample(),
             ],
           ),
         ),
