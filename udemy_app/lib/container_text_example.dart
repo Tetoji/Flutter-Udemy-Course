@@ -7,13 +7,13 @@ class ContainerTextExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 10),
+      padding: EdgeInsets.symmetric(vertical: 10),
       child: Material(
         elevation: 10,
         borderRadius: BorderRadius.circular(20),
         child: Container(
           decoration: BoxDecoration(
-            color: const Color.fromRGBO(137, 221, 225, 0.872),
+            color: const Color.fromARGB(246, 205, 48, 30),
             borderRadius: BorderRadius.circular(20),
           ),
           height: 150,

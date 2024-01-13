@@ -19,11 +19,11 @@ class RowExpandedExample extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 color: const Color.fromARGB(96, 0, 0, 0),
               ),
-              height: 200,
+              height: 100,
               width: 50,
               child: const Center(
                 child: AutoSizeText(
-                  "4",
+                  "3",
                   minFontSize: 15.0,
                   style: TextStyle(
                     fontSize: 30,
@@ -47,11 +47,11 @@ class RowExpandedExample extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     color: const Color(0xD7D05757),
                   ),
-                  height: 200,
+                  height: 100,
                   width: 50,
                   child: const Center(
                     child: AutoSizeText(
-                      "5",
+                      "4",
                       minFontSize: 15.0,
                       style: TextStyle(
                         fontSize: 30,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:udemy_app/app_picture.dart';
 import 'package:udemy_app/row_expanded_example.dart';
 import 'package:udemy_app/container_text_example.dart';
 
@@ -29,9 +30,12 @@ class WidgetsExamplesPage extends StatelessWidget {
           child: Column(
             children: [
               //* First Widget
+              const AppPicture(),
+
+              //* Second(1) Widget
               const ContainerTextExample(),
 
-              //* Second Widget
+              //* Third(2) Widget
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 child: Material(
@@ -39,7 +43,7 @@ class WidgetsExamplesPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(246, 205, 48, 30),
+                      color: const Color.fromRGBO(239, 174, 63, 0.817),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     height: 100,
@@ -58,34 +62,7 @@ class WidgetsExamplesPage extends StatelessWidget {
                 ),
               ),
 
-              //* Third Widget
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10),
-                child: Material(
-                  elevation: 10,
-                  borderRadius: BorderRadius.circular(20),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: const Color.fromRGBO(239, 174, 63, 0.817),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    height: 100,
-                    child: const Center(
-                      child: AutoSizeText(
-                        "3",
-                        minFontSize: 15.0,
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-
-              //* Fourth and Fifth Widget
+              //* Fourth(3) and Fifth(4) Widget
               const RowExpandedExample(),
             ],
           ),
