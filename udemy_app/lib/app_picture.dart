@@ -1,55 +1,65 @@
 import 'package:flutter/material.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 class AppPicture extends StatelessWidget {
   const AppPicture({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: Center(
-        child: Expanded(
-          //* Picture Container
-          child: SizedBox(
-            height: 270, //! Hight overall
-            width: 270, //! Width overall (in this case even to zoom in picture)
-            child: Stack(
-              children: [
-                const SizedBox(
-                  height:
-                      240, //! For circular picture height = width of Container(overall)
-                  child: CircleAvatar(
-                    radius: 240,
-                    backgroundImage: AssetImage(
-                        "assets/reis-mit-bohnen-einfache-reispfanne.jpg"),
-                  ),
-                ),
 
-                //* Text Container
-                Align(
-                  alignment: Alignment.bottomCenter, //! To alignt text box
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Color.fromARGB(239, 255, 193, 7),
-                    ),
-                    alignment: Alignment.center,
-                    height: 60,
-                    width: 240,
-                    child: const AutoSizeText(
+      //* Picture Container
+      child: SizedBox(
+        height: size.height * .31, //! Hight overall (270)
+        width: size.width *
+            .6, //! Width overall (in this case even to zoom in picture)
+        child: Stack(
+          children: [
+            const SizedBox(
+              height:
+                  240, //! For circular picture height = width of Container(overall)
+              child: CircleAvatar(
+                radius: 240,
+                backgroundImage: AssetImage(
+                    "assets/reis-mit-bohnen-einfache-reispfanne.jpg"),
+              ),
+            ),
+
+            //* Text Container
+            Align(
+              alignment: Alignment.bottomCenter, //! To alignt text box
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color.fromARGB(246, 240, 181, 5),
+                ),
+                alignment: Alignment.center,
+                height: size.height * .07,
+                width: 240,
+                child: const Column(
+                  children: [
+                    Text(
                       "Beschuss",
                       style: TextStyle(
-                        fontSize: 26,
+                        fontSize: 22,
                         fontWeight: FontWeight.w500,
                         color: Colors.white,
                       ),
                     ),
-                  ),
+                    Text(
+                      "Deine Tracking-App",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );

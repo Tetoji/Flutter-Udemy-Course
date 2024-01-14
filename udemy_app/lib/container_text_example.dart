@@ -6,8 +6,9 @@ class ContainerTextExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: Material(
         elevation: 10,
         borderRadius: BorderRadius.circular(20),
@@ -16,7 +17,7 @@ class ContainerTextExample extends StatelessWidget {
             color: const Color.fromARGB(246, 205, 48, 30),
             borderRadius: BorderRadius.circular(20),
           ),
-          height: 150,
+          height: size.height * 0.15,
           //width: 300,
           child: const Center(
             child: AutoSizeText(

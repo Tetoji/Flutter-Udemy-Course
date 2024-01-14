@@ -23,7 +23,7 @@ class WidgetsExamplesPage extends StatelessWidget {
           minFontSize: 25.0,
         ),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(
               horizontal: 10, vertical: 20), //! For every Widget in Body
@@ -64,6 +64,8 @@ class WidgetsExamplesPage extends StatelessWidget {
 
               //* Fourth(3) and Fifth(4) Widget
               const RowExpandedExample(),
+
+              const ContainerTextExample(),
             ],
           ),
         ),
