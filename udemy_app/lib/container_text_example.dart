@@ -18,17 +18,29 @@ class ContainerTextExample extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           height: size.height * 0.15,
-          //width: 300,
-          child: const Center(
-            child: AutoSizeText(
-              "1",
-              minFontSize: 15.0,
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.w500,
-                color: Colors.white,
+          width: size.width,
+          child: const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Ihr Counter:",
+                style: TextStyle(
+                  fontFamily: 'BarlowCondensed',
+                  fontSize: 30,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
               ),
-            ),
+              AutoSizeText(
+                "69",
+                minFontSize: 15.0,
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+              ),
+            ],
           ),
         ),
       ),

@@ -22,7 +22,7 @@ class AppPicture extends StatelessWidget {
               child: CircleAvatar(
                 radius: 240,
                 backgroundImage: AssetImage(
-                    "assets/reis-mit-bohnen-einfache-reispfanne.jpg"),
+                    "assets/images/reis-mit-bohnen-einfache-reispfanne.jpg"),
               ),
             ),
 
