@@ -35,6 +35,7 @@ class ContainerTextExample extends StatelessWidget {
                 "69",
                 minFontSize: 15.0,
                 style: TextStyle(
+                  fontFamily: 'BarlowCondensed',
                   fontSize: 25,
                   fontWeight: FontWeight.w500,
                   color: Colors.white,

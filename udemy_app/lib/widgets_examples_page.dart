@@ -19,8 +19,11 @@ class WidgetsExamplesPage extends StatelessWidget {
         centerTitle: true,
         title: const AutoSizeText(
           "Beschuss Tracking",
-          style: TextStyle(fontWeight: FontWeight.w700),
-          minFontSize: 25.0,
+          style: TextStyle(
+            fontFamily: 'BarlowCondensed',
+            fontWeight: FontWeight.w700,
+          ),
+          minFontSize: 30.0,
         ),
       ),
       body: SingleChildScrollView(
@@ -52,6 +55,7 @@ class WidgetsExamplesPage extends StatelessWidget {
                         "2",
                         minFontSize: 15.0,
                         style: TextStyle(
+                          fontFamily: 'BarlowCondensed',
                           fontSize: 30,
                           fontWeight: FontWeight.w500,
                           color: Colors.white,

@@ -11,7 +11,7 @@ class AppPicture extends StatelessWidget {
 
       //* Picture Container
       child: SizedBox(
-        height: size.height * .31, //! Hight overall (270)
+        height: size.height * .34, //! Hight overall (270)
         width: size.width *
             .6, //! Width overall (in this case even to zoom in picture)
         child: Stack(
@@ -35,14 +35,15 @@ class AppPicture extends StatelessWidget {
                   color: const Color.fromARGB(246, 240, 181, 5),
                 ),
                 alignment: Alignment.center,
-                height: size.height * .07,
+                height: size.height * .09,
                 width: 240,
                 child: const Column(
                   children: [
                     Text(
                       "Beschuss",
                       style: TextStyle(
-                        fontSize: 22,
+                        fontFamily: 'BarlowCondensed',
+                        fontSize: 25,
                         fontWeight: FontWeight.w500,
                         color: Colors.white,
                       ),
@@ -50,7 +51,8 @@ class AppPicture extends StatelessWidget {
                     Text(
                       "Deine Tracking-App",
                       style: TextStyle(
-                        fontSize: 15,
+                        fontFamily: 'BarlowCondensed',
+                        fontSize: 20,
                         fontWeight: FontWeight.w400,
                         color: Colors.white,
                       ),

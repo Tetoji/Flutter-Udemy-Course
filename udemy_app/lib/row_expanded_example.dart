@@ -26,6 +26,7 @@ class RowExpandedExample extends StatelessWidget {
                   "3",
                   minFontSize: 15.0,
                   style: TextStyle(
+                    fontFamily: 'BarlowCondensed',
                     fontSize: 30,
                     fontWeight: FontWeight.w500,
                     color: Colors.white,
@@ -54,6 +55,7 @@ class RowExpandedExample extends StatelessWidget {
                       "4",
                       minFontSize: 15.0,
                       style: TextStyle(
+                        fontFamily: 'BarlowCondensed',
                         fontSize: 30,
                         fontWeight: FontWeight.w500,
                         color: Colors.white,
