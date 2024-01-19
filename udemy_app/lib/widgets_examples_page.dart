@@ -11,11 +11,8 @@ class WidgetsExamplesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(246, 116, 189, 202),
-        leading: const Icon(
-          Icons.home,
-          size: 25.0,
-        ),
+        scrolledUnderElevation: 0.0, //! AppBar doesnt change color after scroll
+        backgroundColor: Colors.white,
         centerTitle: true,
         title: const AutoSizeText(
           "Beschuss Tracking",
@@ -74,6 +71,31 @@ class WidgetsExamplesPage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: Container(
+          height: 60,
+          color: Colors.white,
+          child: Align(
+            child: InkWell(
+              // ignore: avoid_print,
+              onTap: () => print('tap on close'),
+              child: const Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(
+                    Icons.home,
+                    color: Colors.black,
+                  ),
+                  Text(
+                    'Home',
+                    style: TextStyle(
+                        fontFamily: 'BarlowCondensed',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
+                  ),
+                ],
+              ),
+            ),
+          )),
     );
   }
 }
