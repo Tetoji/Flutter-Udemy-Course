@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:udemy_app/widgets_examples_page.dart';
+import 'widgets_examples/widgets_examples_page.dart';
 
 void main() {
   runApp(const MyApp());

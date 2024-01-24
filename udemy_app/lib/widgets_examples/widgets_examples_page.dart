@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:udemy_app/app_picture.dart';
-import 'package:udemy_app/row_expanded_example.dart';
-import 'package:udemy_app/container_text_example.dart';
+
+import 'widgets/app_picture.dart';
+import 'widgets/container_text_example.dart';
+import 'widgets/row_expanded_example.dart';
 
 class WidgetsExamplesPage extends StatelessWidget {
   const WidgetsExamplesPage({super.key});
