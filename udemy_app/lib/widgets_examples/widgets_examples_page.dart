@@ -73,30 +73,31 @@ class WidgetsExamplesPage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
-          height: 60,
-          color: Colors.white,
-          child: Align(
-            child: InkWell(
-              // ignore: avoid_print,
-              onTap: () => print('tap on close'),
-              child: const Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Icon(
-                    Icons.home,
-                    color: Colors.black,
-                  ),
-                  Text(
-                    'Home',
-                    style: TextStyle(
-                        fontFamily: 'BarlowCondensed',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18),
-                  ),
-                ],
-              ),
+        height: 60,
+        color: Colors.white,
+        child: Align(
+          child: InkWell(
+            // ignore: avoid_print,
+            onTap: () => print('tap on close'),
+            child: const Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Icon(
+                  Icons.home,
+                  color: Colors.black,
+                ),
+                Text(
+                  'Home',
+                  style: TextStyle(
+                      fontFamily: 'BarlowCondensed',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
+                ),
+              ],
             ),
-          )),
+          ),
+        ),
+      ),
     );
   }
 }

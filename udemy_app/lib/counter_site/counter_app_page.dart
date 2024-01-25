@@ -14,7 +14,6 @@ class _CounterAppPageState extends State<CounterAppPage> {
   void incrementcounter() {
     setState(() {
       counter++;
-      print(counter);
     });
   }
 
@@ -24,7 +23,6 @@ class _CounterAppPageState extends State<CounterAppPage> {
       } else {
         counter--;
       }
-      print(counter);
     });
   }
 
