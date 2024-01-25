@@ -72,6 +72,8 @@ class WidgetsExamplesPage extends StatelessWidget {
           ),
         ),
       ),
+
+      /* //! Navbar with InkWell but for now not in use 
       bottomNavigationBar: Container(
         height: 60,
         color: Colors.white,
@@ -97,7 +99,7 @@ class WidgetsExamplesPage extends StatelessWidget {
             ),
           ),
         ),
-      ),
+      ),*/
     );
   }
 }
