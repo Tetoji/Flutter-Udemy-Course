@@ -9,6 +9,22 @@ class CounterAppPage extends StatefulWidget {
 }
 
 class _CounterAppPageState extends State<CounterAppPage> {
+  int counter = 0;
+
+  void incrementcounter() {
+    setState(() {
+      counter++;
+      print(counter);
+    });
+  }
+
+  void decrementcounter() {
+    setState(() {
+      counter--;
+      print(counter);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +50,9 @@ class _CounterAppPageState extends State<CounterAppPage> {
             width: 200,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.amber,
+              color: counter < 20
+                  ? Colors.amber
+                  : Colors.amberAccent, //! Wenn-Bedingung
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -51,9 +69,9 @@ class _CounterAppPageState extends State<CounterAppPage> {
                 ),
                 Container(
                   padding: const EdgeInsets.only(top: 10),
-                  child: const Text(
-                    "123",
-                    style: TextStyle(
+                  child: Text(
+                    counter.toString(),
+                    style: const TextStyle(
                         fontFamily: 'BarlowCondensed',
                         fontSize: 25,
                         fontWeight: FontWeight.w600),
@@ -72,15 +90,15 @@ class _CounterAppPageState extends State<CounterAppPage> {
           children: [
             FloatingActionButton(
               backgroundColor: Colors.blue,
-              onPressed: () {},
+              onPressed: () => incrementcounter(),
               child: const Icon(
                 Icons.add,
                 color: Colors.white,
               ),
             ),
             FloatingActionButton(
-              backgroundColor: Colors.blue,
-              onPressed: () {},
+              backgroundColor: Colors.red,
+              onPressed: () => decrementcounter(),
               child: const Icon(
                 Icons.remove,
                 color: Colors.white,
