@@ -72,18 +72,16 @@ class WidgetsExamplesPage extends StatelessWidget {
           ),
         ),
       ),
-      /*bottomNavigationBar: Container(
+      bottomNavigationBar: Container(
         height: 60,
         color: Colors.white,
         child: Align(
           child: InkWell(
             // ignore: avoid_print,
-            onTap: () {
-              print("hallo");
-            },
+            onTap: () => print('tap on close'),
             child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: <Widget>[
                 Icon(
                   Icons.home,
                   color: Colors.black,
@@ -99,7 +97,7 @@ class WidgetsExamplesPage extends StatelessWidget {
             ),
           ),
         ),
-      ),*/
+      ),
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:udemy_app/navbar_widget.dart';
+import 'package:udemy_app/counter_site/counter_app_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(scaffoldBackgroundColor: Colors.white),
-      home: const NavbarWidget(),
-    );
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(scaffoldBackgroundColor: Colors.white),
+        home: const CounterAppPage());
   }
 }
