@@ -20,7 +20,10 @@ class _CounterAppPageState extends State<CounterAppPage> {
 
   void decrementcounter() {
     setState(() {
-      counter--;
+      if (counter == 0) {
+      } else {
+        counter--;
+      }
       print(counter);
     });
   }
