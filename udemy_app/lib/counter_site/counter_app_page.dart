@@ -90,6 +90,7 @@ class _CounterAppPageState extends State<CounterAppPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             FloatingActionButton(
+              heroTag: "incrementBtn",
               backgroundColor: Colors.blue,
               onPressed: () => incrementcounter(),
               child: const Icon(
@@ -98,6 +99,7 @@ class _CounterAppPageState extends State<CounterAppPage> {
               ),
             ),
             FloatingActionButton(
+              heroTag: "decrementBtn",
               backgroundColor: Colors.red,
               onPressed: () => decrementcounter(),
               child: const Icon(
