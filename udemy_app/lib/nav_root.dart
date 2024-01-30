@@ -15,6 +15,7 @@ class _RootWidgetState extends State<NavbarWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: IndexedStack(
+        //! Hold the state of every widget (counter dont reset on side change)
         index: _currentIndex,
         children: const [
           WidgetsExamplesPage(),
