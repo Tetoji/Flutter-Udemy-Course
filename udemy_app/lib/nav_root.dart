@@ -22,7 +22,10 @@ class _RootWidgetState extends State<NavbarWidget> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 0.0,
         backgroundColor: Colors.white,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
         onTap: (index) {
           setState(() {
             _currentIndex = index;
