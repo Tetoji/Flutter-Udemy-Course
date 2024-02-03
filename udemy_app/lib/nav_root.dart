@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:udemy_app/counter_site/counter_app_page.dart';
+import 'package:udemy_app/theme_animation/theme_animation_page.dart';
 import 'package:udemy_app/widgets_examples/widgets_examples_page.dart';
 
 class NavbarWidget extends StatefulWidget {
@@ -20,6 +21,7 @@ class _RootWidgetState extends State<NavbarWidget> {
         children: const [
           WidgetsExamplesPage(),
           CounterAppPage(),
+          ThemaAnimationPage()
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -37,7 +39,9 @@ class _RootWidgetState extends State<NavbarWidget> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.countertops_sharp), label: "Counter")
+              icon: Icon(Icons.countertops_sharp), label: "Counter"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.dark_mode), label: "Theme Page")
         ],
       ),
     );
