@@ -9,7 +9,7 @@ class ThemaAnimationPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         scrolledUnderElevation: 0.0, //! AppBar doesnt change color after scroll
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         centerTitle: true,
         title: const AutoSizeText(
           "Theme Page",

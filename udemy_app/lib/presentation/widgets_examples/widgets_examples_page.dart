@@ -12,7 +12,7 @@ class WidgetsExamplesPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         scrolledUnderElevation: 0.0, //! AppBar doesnt change color after scroll
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         centerTitle: true,
         title: const AutoSizeText(
           "Beschuss Tracking",
@@ -65,8 +65,6 @@ class WidgetsExamplesPage extends StatelessWidget {
 
               //* Fourth(3) and Fifth(4) Widget
               const RowExpandedExample(),
-
-              const ContainerTextExample(),
             ],
           ),
         ),

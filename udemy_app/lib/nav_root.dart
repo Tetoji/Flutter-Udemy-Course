@@ -26,7 +26,7 @@ class _RootWidgetState extends State<NavbarWidget> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0.0,
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.grey,
         onTap: (index) {
