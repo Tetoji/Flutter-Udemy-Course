@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:udemy_app/counter_site/counter_app_page.dart';
-import 'package:udemy_app/theme_animation/theme_animation_page.dart';
-import 'package:udemy_app/widgets_examples/widgets_examples_page.dart';
+import 'package:udemy_app/presentation/counter_site/counter_app_page.dart';
+import 'package:udemy_app/presentation/theme_animation/theme_animation_page.dart';
+import 'package:udemy_app/presentation/widgets_examples/widgets_examples_page.dart';
 
 class NavbarWidget extends StatefulWidget {
   const NavbarWidget({super.key});

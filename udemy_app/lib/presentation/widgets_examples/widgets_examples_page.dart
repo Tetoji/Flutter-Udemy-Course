@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-
 import 'widgets/app_picture.dart';
 import 'widgets/container_text_example.dart';
 import 'widgets/row_expanded_example.dart';
