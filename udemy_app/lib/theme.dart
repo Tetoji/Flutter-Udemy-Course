@@ -4,11 +4,13 @@ class AppTheme {
   AppTheme._();
 
   //* Light Colors
-  static final Color _lightPrimaryColor = Colors.white;
+  static const Color _lightPrimaryColor = Colors.white;
   static final Color _lightPrimaryVariantColor = Colors.blueGrey.shade800;
   static final Color _lightOnPrimaryColor = Colors.blueGrey.shade200;
   static const Color _lightTextColorPrimary = Colors.black;
   static const Color _appbarColorLight = Colors.blue;
+  static final Color _lightSelectedIconColor = Colors.grey.shade800;
+  static const Color _lightUnselectedIconColor = Colors.grey;
 
   //* Dark Colors
   static final Color _darkPrimaryColor = Colors.blueGrey.shade900;
@@ -16,6 +18,8 @@ class AppTheme {
   static final Color _darkOnPrimaryColor = Colors.blueGrey.shade300;
   static const Color _darkTextColorPrimary = Colors.white;
   static final Color _appbarColorDark = Colors.blueGrey.shade800;
+  static const Color _darkSelectedIconColor = Colors.white;
+  static final Color _darkUnselectedIconColor = Colors.grey.shade500;
 
   static const Color _iconColor = Colors.white;
 
@@ -32,17 +36,6 @@ class AppTheme {
     bodyLarge: _lightBodyText,
   );
 
-  static final TextStyle _darkThemeHeadingTextStyle =
-      _lightHeadingText.copyWith(color: _darkTextColorPrimary);
-
-  static final TextStyle _darkThemeBodyeTextStyle =
-      _lightBodyText.copyWith(color: _darkTextColorPrimary);
-
-  static final TextTheme _darkTextTheme = TextTheme(
-    displayLarge: _darkThemeHeadingTextStyle,
-    bodyLarge: _darkThemeBodyeTextStyle,
-  );
-
   static final ThemeData lightTheme = ThemeData(
       scaffoldBackgroundColor: _lightPrimaryColor,
       appBarTheme: const AppBarTheme(
@@ -53,7 +46,22 @@ class AppTheme {
           primary: _lightPrimaryColor,
           onPrimary: _lightOnPrimaryColor,
           primaryContainer: _lightPrimaryVariantColor),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: _lightPrimaryColor,
+          selectedItemColor: _lightSelectedIconColor,
+          unselectedItemColor: _lightUnselectedIconColor),
       textTheme: _lightTextTheme);
+
+  static final TextStyle _darkThemeHeadingTextStyle =
+      _lightHeadingText.copyWith(color: _darkTextColorPrimary);
+
+  static final TextStyle _darkThemeBodyeTextStyle =
+      _lightBodyText.copyWith(color: _darkTextColorPrimary);
+
+  static final TextTheme _darkTextTheme = TextTheme(
+    displayLarge: _darkThemeHeadingTextStyle,
+    bodyLarge: _darkThemeBodyeTextStyle,
+  );
 
   static final ThemeData darkTheme = ThemeData(
       scaffoldBackgroundColor: _darkPrimaryColor,
@@ -66,5 +74,9 @@ class AppTheme {
         onPrimary: _darkOnPrimaryColor,
         primaryContainer: _darkPrimaryVariantColor,
       ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: _darkPrimaryColor,
+          selectedItemColor: _darkSelectedIconColor,
+          unselectedItemColor: _darkUnselectedIconColor),
       textTheme: _darkTextTheme);
 }

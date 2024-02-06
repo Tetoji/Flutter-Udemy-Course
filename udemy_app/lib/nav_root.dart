@@ -26,9 +26,12 @@ class _RootWidgetState extends State<NavbarWidget> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0.0,
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.grey,
+        backgroundColor:
+            Theme.of(context).bottomNavigationBarTheme.backgroundColor,
+        selectedItemColor:
+            Theme.of(context).bottomNavigationBarTheme.selectedItemColor,
+        unselectedItemColor:
+            Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
         onTap: (index) {
           setState(() {
             _currentIndex = index;
