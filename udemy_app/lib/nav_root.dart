@@ -15,7 +15,7 @@ class _RootWidgetState extends State<NavbarWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: IndexedStack(
-        //! Hold the state of every widget (counter dont reset on side change)
+        //! Hold the state of every widget (counter dont reset on side change) | Rest after app is closed
         index: _currentIndex,
         children: const [
           WidgetsExamplesPage(),
@@ -23,7 +23,7 @@ class _RootWidgetState extends State<NavbarWidget> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        elevation: 0.0,
+        elevation: 0.0, //! "Border" of NavBar delete
         backgroundColor: Colors.white,
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.grey,
