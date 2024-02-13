@@ -23,6 +23,7 @@ class AppTheme {
 
   static const Color _iconColor = Colors.white;
 
+  //* Text Theme
   static const TextStyle _lightHeadingText =
       TextStyle(color: _lightTextColorPrimary, fontFamily: 'BarlowCondensed');
 
@@ -36,6 +37,18 @@ class AppTheme {
     bodyLarge: _lightBodyText,
   );
 
+  static final TextStyle _darkThemeHeadingTextStyle =
+      _lightHeadingText.copyWith(color: _darkTextColorPrimary);
+
+  static final TextStyle _darkThemeBodyeTextStyle =
+      _lightBodyText.copyWith(color: _darkTextColorPrimary);
+
+  static final TextTheme _darkTextTheme = TextTheme(
+    displayLarge: _darkThemeHeadingTextStyle,
+    bodyLarge: _darkThemeBodyeTextStyle,
+  );
+
+  //* Light Theme
   static final ThemeData lightTheme = ThemeData(
       scaffoldBackgroundColor: _lightPrimaryColor,
       appBarTheme: const AppBarTheme(
@@ -52,17 +65,7 @@ class AppTheme {
           unselectedItemColor: _lightUnselectedIconColor),
       textTheme: _lightTextTheme);
 
-  static final TextStyle _darkThemeHeadingTextStyle =
-      _lightHeadingText.copyWith(color: _darkTextColorPrimary);
-
-  static final TextStyle _darkThemeBodyeTextStyle =
-      _lightBodyText.copyWith(color: _darkTextColorPrimary);
-
-  static final TextTheme _darkTextTheme = TextTheme(
-    displayLarge: _darkThemeHeadingTextStyle,
-    bodyLarge: _darkThemeBodyeTextStyle,
-  );
-
+  //* Dark Theme
   static final ThemeData darkTheme = ThemeData(
       scaffoldBackgroundColor: _darkPrimaryColor,
       appBarTheme: AppBarTheme(

@@ -17,7 +17,7 @@ class RowExpandedExample extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: const Color.fromARGB(96, 0, 0, 0),
+                color: const Color.fromARGB(255, 162, 154, 154),
               ),
               height: 100,
               width: 50,

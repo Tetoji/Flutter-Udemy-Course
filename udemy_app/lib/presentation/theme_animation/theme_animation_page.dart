@@ -26,10 +26,23 @@ class ThemaAnimationPage extends StatelessWidget {
           child: Material(
             borderRadius: const BorderRadius.all(Radius.circular(20)),
             elevation: 8,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.white,
+            color: Theme.of(context).colorScheme.onPrimary,
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(minWidth: double.infinity),
+              child: const Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Heading",
+                    style:
+                        TextStyle(fontFamily: 'BarlowCondensed', fontSize: 30),
+                  ),
+                  Text(
+                    "Body",
+                    style:
+                        TextStyle(fontFamily: 'BarlowCondensed', fontSize: 25),
+                  ),
+                ],
               ),
             ),
           ),
