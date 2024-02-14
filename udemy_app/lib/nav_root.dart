@@ -35,7 +35,6 @@ class _RootWidgetState extends State<NavbarWidget> {
         onTap: (index) {
           setState(() {
             _currentIndex = index;
-            print(_currentIndex);
           });
         },
         currentIndex: _currentIndex,
