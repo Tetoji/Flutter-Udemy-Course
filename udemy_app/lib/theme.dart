@@ -8,7 +8,7 @@ class AppTheme {
   static final Color _lightPrimaryVariantColor = Colors.blueGrey.shade800;
   static final Color _lightOnPrimaryColor = Colors.blueGrey.shade100;
   static const Color _lightTextColorPrimary = Colors.black;
-  static const Color _appbarColorLight = Colors.blue;
+  static const Color _appbarColorLight = Color.fromARGB(255, 150, 208, 255);
   static final Color _lightSelectedIconColor = Colors.grey.shade800;
   static const Color _lightUnselectedIconColor = Colors.grey;
 
@@ -52,7 +52,7 @@ class AppTheme {
   static final ThemeData lightTheme = ThemeData(
       scaffoldBackgroundColor: _lightPrimaryColor,
       appBarTheme: const AppBarTheme(
-          color: _appbarColorLight,
+          backgroundColor: _appbarColorLight,
           iconTheme: IconThemeData(color: _iconColor)),
       bottomAppBarTheme: const BottomAppBarTheme(color: _appbarColorLight),
       colorScheme: ColorScheme.light(
@@ -69,7 +69,7 @@ class AppTheme {
   static final ThemeData darkTheme = ThemeData(
       scaffoldBackgroundColor: _darkPrimaryColor,
       appBarTheme: AppBarTheme(
-          color: _appbarColorDark,
+          backgroundColor: _appbarColorDark,
           iconTheme: const IconThemeData(color: _iconColor)),
       bottomAppBarTheme: BottomAppBarTheme(color: _appbarColorDark),
       colorScheme: ColorScheme.dark(

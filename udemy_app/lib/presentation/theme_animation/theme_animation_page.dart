@@ -34,39 +34,62 @@ class ThemaAnimationPage extends StatelessWidget {
               color: Theme.of(context).colorScheme.onPrimary,
               child: ConstrainedBox(
                 constraints: const BoxConstraints(minWidth: double.infinity),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      "Heading",
-                      style: TextStyle(
-                          fontFamily: 'BarlowCondensed', fontSize: 30),
-                    ),
-                    const Text(
-                      "Body",
-                      style: TextStyle(
-                          fontFamily: 'BarlowCondensed', fontSize: 25),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text(
-                          "Darkmode:",
-                          style: TextStyle(
-                              fontFamily: 'BarlowCondensed', fontSize: 20),
+                child: SizedBox(
+                  height: double.infinity,
+                  child: Stack(
+                    children: [
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(20),
+                              bottomRight: Radius.circular(20),
+                            ),
+                            color:
+                                Theme.of(context).appBarTheme.backgroundColor,
+                          ),
+                          height: 225,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                "Heading",
+                                style: TextStyle(
+                                    fontFamily: 'BarlowCondensed',
+                                    fontSize: 30),
+                              ),
+                              const Text("Body",
+                                  style: TextStyle(
+                                      fontFamily: 'BarlowCondensed',
+                                      fontSize: 25)),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  const Text(
+                                    "Darkmode:",
+                                    style: TextStyle(
+                                        fontFamily: 'BarlowCondensed',
+                                        fontSize: 20),
+                                  ),
+                                  Switch(
+                                    value: themeService.isDarkModeOn,
+                                    onChanged: (value) {
+                                      Provider.of<ThemeService>(
+                                        context,
+                                        listen: false,
+                                      ) //!Provider to invoke function
+                                          .toggleTheme();
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                        Switch(
-                          value: themeService.isDarkModeOn,
-                          onChanged: (value) {
-                            Provider.of<ThemeService>(context,
-                                    listen:
-                                        false) //!Provider to invoke function
-                                .toggleTheme();
-                          },
-                        ),
-                      ],
-                    )
-                  ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
