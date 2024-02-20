@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -16,7 +18,7 @@ class ThemaAnimationPage extends StatelessWidget {
         appBar: AppBar(
           scrolledUnderElevation:
               0.0, //! AppBar doesnt change color after scroll
-          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+          backgroundColor: Theme.of(context).colorScheme.primary,
           centerTitle: true,
           title: const AutoSizeText(
             "Theme Page",
@@ -38,7 +40,7 @@ class ThemaAnimationPage extends StatelessWidget {
                 constraints: const BoxConstraints(minWidth: double.infinity),
                 //! upper half
                 child: Container(
-                  height: double.infinity,
+                  height: 600,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     gradient: LinearGradient(
@@ -121,7 +123,7 @@ class ThemaAnimationPage extends StatelessWidget {
                       ),
                       AnimatedPadding(
                         padding: EdgeInsets.only(
-                            top: themeService.isDarkModeOn ? 205 : 155),
+                            top: themeService.isDarkModeOn ? 200 : 150),
                         duration: const Duration(microseconds: 300),
                         child: const Center(child: Sun()),
                       ),
