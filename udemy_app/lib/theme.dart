@@ -8,7 +8,7 @@ class AppTheme {
   static final Color _lightPrimaryVariantColor = Colors.blueGrey.shade800;
   static final Color _lightOnPrimaryColor = Colors.blueGrey.shade100;
   static const Color _lightTextColorPrimary = Colors.black;
-  static const Color _appbarColorLight = Color.fromARGB(255, 150, 208, 255);
+  static const Color _appbarColorLight = Color.fromARGB(255, 232, 232, 232);
   static final Color _lightSelectedIconColor = Colors.grey.shade800;
   static const Color _lightUnselectedIconColor = Colors.grey;
 

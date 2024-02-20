@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:udemy_app/application/theme_service.dart';
+import 'package:udemy_app/presentation/theme_animation/animation_widgets/sun.dart';
 
 class ThemaAnimationPage extends StatelessWidget {
   const ThemaAnimationPage({super.key});
@@ -34,15 +35,41 @@ class ThemaAnimationPage extends StatelessWidget {
               color: Theme.of(context).colorScheme.onPrimary,
               child: ConstrainedBox(
                 constraints: const BoxConstraints(minWidth: double.infinity),
-                child: SizedBox(
+                //! upper half
+                child: Container(
                   height: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    gradient: LinearGradient(
+                      colors: themeService.isDarkModeOn
+                          ? const [
+                              Color.fromARGB(255, 13, 32, 106),
+                              Color.fromARGB(255, 35, 54, 133),
+                              Color.fromARGB(255, 170, 183, 242),
+                            ]
+                          : [
+                              const Color.fromARGB(255, 103, 133, 255),
+                              const Color.fromARGB(255, 165, 180, 237),
+                              const Color.fromARGB(255, 255, 255, 255),
+                            ],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    ),
+                  ),
+                  //! lower half
                   child: Stack(
                     children: [
+                      AnimatedPadding(
+                        padding: EdgeInsets.only(
+                            top: themeService.isDarkModeOn ? 205 : 155),
+                        duration: const Duration(microseconds: 300),
+                        child: const Center(child: Sun()),
+                      ),
                       Align(
                         alignment: Alignment.bottomCenter,
                         child: Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(20),
                               bottomRight: Radius.circular(20),
                             ),
