@@ -121,6 +121,12 @@ class ThemaAnimationPage extends StatelessWidget {
                         right: 50,
                         child: StarsBig(),
                       ),
+                      AnimatedPositioned(
+                        top: themeService.isDarkModeOn ? 120 : 300,
+                        right: themeService.isDarkModeOn ? 70 : -100,
+                        duration: const Duration(milliseconds: 300),
+                        child: Moon(),
+                      ),
                       AnimatedPadding(
                         padding: EdgeInsets.only(
                             top: themeService.isDarkModeOn ? 200 : 150),
