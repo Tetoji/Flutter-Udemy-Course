@@ -64,7 +64,7 @@ class ThemaAnimationPage extends StatelessWidget {
                     children: [
                       AnimatedOpacity(
                         opacity: themeService.isDarkModeOn ? 1 : 0.1,
-                        duration: const Duration(microseconds: 200),
+                        duration: const Duration(milliseconds: 800),
                         child: const Stack(
                           children: [
                             Positioned(
@@ -133,12 +133,16 @@ class ThemaAnimationPage extends StatelessWidget {
                         top: themeService.isDarkModeOn ? 120 : 300,
                         right: themeService.isDarkModeOn ? 70 : -100,
                         duration: const Duration(milliseconds: 300),
-                        child: const Moon(),
+                        child: AnimatedOpacity(
+                          opacity: themeService.isDarkModeOn ? 1 : 0.1,
+                          duration: const Duration(milliseconds: 200),
+                          child: Moon(),
+                        ),
                       ),
                       AnimatedPadding(
                         padding: EdgeInsets.only(
                             top: themeService.isDarkModeOn ? 200 : 150),
-                        duration: const Duration(microseconds: 300),
+                        duration: const Duration(milliseconds: 200),
                         child: const Center(child: Sun()),
                       ),
                       Align(
