@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:udemy_app/application/theme_service.dart';
+import 'package:udemy_app/presentation/theme_animation/animation_widgets/moon.dart';
 import 'package:udemy_app/presentation/theme_animation/animation_widgets/stars.dart';
 import 'package:udemy_app/presentation/theme_animation/animation_widgets/sun.dart';
 
@@ -61,65 +62,78 @@ class ThemaAnimationPage extends StatelessWidget {
                   //! lower half
                   child: Stack(
                     children: [
-                      const Positioned(
-                        right: 60,
-                        child: StarsBig(),
+                      AnimatedOpacity(
+                        opacity: themeService.isDarkModeOn ? 1 : 0.08,
+                        duration: const Duration(microseconds: 300),
+                        child: const Stack(
+                          children: [
+                            Positioned(
+                              right: 60,
+                              child: StarsBig(),
+                            ),
+                            Positioned(
+                              top: 15,
+                              right: 67,
+                              child: StarsBig(),
+                            ),
+                            Positioned(
+                              top: 30,
+                              right: 200,
+                              child: StarsBig(),
+                            ),
+                            Positioned(
+                              top: 28,
+                              right: 240,
+                              child: Stars(),
+                            ),
+                            Positioned(
+                              top: 29,
+                              right: 280,
+                              child: StarsBig(),
+                            ),
+                            Positioned(
+                              top: 25,
+                              right: 300,
+                              child: StarsBig(),
+                            ),
+                            Positioned(
+                              top: 150,
+                              right: 150,
+                              child: Stars(),
+                            ),
+                            Positioned(
+                              top: 130,
+                              right: 140,
+                              child: Stars(),
+                            ),
+                            Positioned(
+                              top: 130,
+                              right: 190,
+                              child: Stars(),
+                            ),
+                            Positioned(
+                              top: 100,
+                              right: 260,
+                              child: StarsBig(),
+                            ),
+                            Positioned(
+                              top: 80,
+                              right: 190,
+                              child: Stars(),
+                            ),
+                            Positioned(
+                              top: 100,
+                              right: 50,
+                              child: StarsBig(),
+                            ),
+                          ],
+                        ),
                       ),
-                      const Positioned(
-                        top: 15,
-                        right: 67,
-                        child: StarsBig(),
-                      ),
-                      const Positioned(
-                        top: 30,
-                        right: 200,
-                        child: StarsBig(),
-                      ),
-                      const Positioned(
-                        top: 28,
-                        right: 240,
-                        child: Stars(),
-                      ),
-                      const Positioned(
-                        top: 29,
-                        right: 280,
-                        child: StarsBig(),
-                      ),
-                      const Positioned(
-                        top: 25,
-                        right: 300,
-                        child: StarsBig(),
-                      ),
-                      const Positioned(
-                        top: 150,
-                        right: 150,
-                        child: Stars(),
-                      ),
-                      const Positioned(
-                        top: 130,
-                        right: 140,
-                        child: Stars(),
-                      ),
-                      const Positioned(
-                        top: 130,
-                        right: 190,
-                        child: Stars(),
-                      ),
-                      const Positioned(
-                        top: 100,
-                        right: 260,
-                        child: StarsBig(),
-                      ),
-                      const Positioned(
-                        top: 80,
-                        right: 190,
-                        child: Stars(),
-                      ),
-                      const Positioned(
-                        top: 100,
-                        right: 50,
-                        child: StarsBig(),
-                      ),
+                      AnimatedPositioned(
+                          top: themeService.isDarkModeOn ? 110 : 300,
+                          right: themeService.isDarkModeOn ? 90 : -120,
+                          duration: const Duration(milliseconds: 200),
+                          child: const Moon()),
                       AnimatedPadding(
                         padding: EdgeInsets.only(
                             top: themeService.isDarkModeOn ? 200 : 150),
