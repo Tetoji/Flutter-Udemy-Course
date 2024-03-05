@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:udemy_app/application/theme_service.dart';
-//import 'package:udemy_app/counter_site/counter_app_page.dart';
 import 'package:udemy_app/nav_root.dart';
 import 'package:udemy_app/theme.dart';
 

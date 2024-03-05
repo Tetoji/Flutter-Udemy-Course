@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -7,6 +5,7 @@ import 'package:udemy_app/application/theme_service.dart';
 import 'package:udemy_app/presentation/theme_animation/animation_widgets/stars.dart';
 import 'package:udemy_app/presentation/theme_animation/animation_widgets/sun.dart';
 
+//TODO Shared prefernces
 class ThemaAnimationPage extends StatelessWidget {
   const ThemaAnimationPage({super.key});
 
